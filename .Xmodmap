@@ -1,0 +1,8 @@
+remove lock = Eisu_toggle
+
+keycode 66 = Control_L
+keycode 102 = Escape
+keycode 100 = Escape
+
+add control = Control_L
+
