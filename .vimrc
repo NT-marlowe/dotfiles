@@ -1,5 +1,4 @@
 set number 
-" ファイルを上書きする前にバックアップを作ることを無効化
 set nowritebackup
 " ファイルを上書きする前にバックアップを作ることを無効化
 set nobackup
@@ -92,7 +91,7 @@ set nrformats=
 " 行をまたいで移動
 set whichwrap=b,s,h,l,<,>,[,],~
 " バッファスクロール
-set mouse=a
+"set mouse=a
 
 " auto reload .vimrc
 augroup source-vimrc
@@ -130,7 +129,7 @@ endif
 
 packadd termdebug
 "マウスを使用
-set mouse=a
+"set mouse=a
 let g:termdebug_wide = 163
 
 packadd termdebug
