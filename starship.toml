@@ -1,8 +1,10 @@
 
 [character]
-success_symbol = "[→](bg:#0000cd fg:#ff1493)"
-error_symbol = "[←](bg:#00ff00 fg:#4b0082)"
-
+#success_symbol = "[→](bg:#0000cd fg:#ff1493)"
+#error_symbol = "[←](bg:#00ff00 fg:#4b0082)"
+success_symbol = "[❯](bright-green)"
+error_symbol = "[❯](bright-red)"
+vicmd_symbol = "[❮](bright-purple)"
 
 [cmd_duration]
 min_time = 60_000
@@ -21,7 +23,7 @@ symbol = "🌱  "
 
 [username]
 style_user = "bold bright-white"
-style_root = "bold white"
+style_root = "bold red"
 format = "[$user]($style) in "
 show_always = true
 
