@@ -18,11 +18,11 @@ style = "bold bright-cyan"
 
 [git_branch]
 style = "bold bright-purple"
-symbol = "🌱  "
+# symbol = "🌱  "
 
 
 [username]
-style_user = "bold bright-white"
+style_user = "bold bright-blue"
 style_root = "bold red"
 format = "[$user]($style) in "
 show_always = true
