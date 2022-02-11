@@ -1,3 +1,10 @@
+format = """$time \
+        $memory_usage\
+        $username\
+        $hostname\
+        $directory\n\
+        $character\
+    """
 
 [character]
 #success_symbol = "[→](bg:#0000cd fg:#ff1493)"
@@ -20,6 +27,10 @@ style = "bold bright-cyan"
 style = "bold bright-purple"
 # symbol = "🌱  "
 
+[time]
+disabled = false
+format = "[$time]($style)"
+time_format = '%c'
 
 [username]
 style_user = "bold bright-blue"
