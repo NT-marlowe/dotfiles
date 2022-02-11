@@ -2,7 +2,9 @@ format = """$time \
         $memory_usage\
         $username\
         $hostname\
-        $directory\n\
+        $directory\
+        $git_branch\
+        $git_status\n\
         $character\
     """
 
@@ -25,7 +27,8 @@ style = "bold bright-cyan"
 
 [git_branch]
 style = "bold bright-purple"
-# symbol = "🌱  "
+symbol = "🌱  "
+
 
 [time]
 disabled = false
