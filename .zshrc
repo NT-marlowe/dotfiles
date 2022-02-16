@@ -1,5 +1,7 @@
 # user-setting of alias
 
+# $(COMMAND) is an expansion of a command COMMAND
+# "command -v foobar" returns the filepath where "foobar" is located (if exists)
 if [[ $(command -v exa) ]]; then
     alias e='exa '
     alias l=e
@@ -13,6 +15,11 @@ if [[ $(command -v exa) ]]; then
     alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always  | less -r'
     alias lta=eta
 fi
+
+if [[ $(command -v batcat) ]]; then
+    alias cat='batcat'
+fi
+
 alias ls="ls --color=auto"
 
 alias vi="nvim"
