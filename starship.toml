@@ -1,4 +1,4 @@
-format = """$time \
+format = """$time | \
         $memory_usage\
         $username\
         $hostname\
