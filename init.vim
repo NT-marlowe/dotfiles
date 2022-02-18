@@ -23,6 +23,12 @@ imap <C-j> <Down>
 imap <C-h> <Left>
 imap <C-l> <Right>
 
+imap [ []<Left>
+imap ( ()<Left>
+imap { {}<Left>
+
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 inoremap <silent> jj <ESC>
 
 "hi CursorLine cterm=NONE 
