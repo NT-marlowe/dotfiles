@@ -1,3 +1,4 @@
+autocmd ColorScheme * highlight LineNr ctermfg=239
 set number 
 set nowritebackup
 " ファイルを上書きする前にバックアップを作ることを無効化
