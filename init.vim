@@ -9,7 +9,7 @@ set expandtab
 set ignorecase smartcase incsearch hlsearch
 set hlsearch
 set background=dark
-set path+=/home/denjo/.config/nvim/
+set path+=~/.config/nvim/
 set wildmenu
 set nobackup noswapfile
 syntax enable

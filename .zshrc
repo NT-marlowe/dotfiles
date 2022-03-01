@@ -20,6 +20,10 @@ if [[ $(command -v batcat) ]]; then
     alias cat='batcat'
 fi
 
+if [[ $(command -v bat) ]]; then
+    alias cat='bat'
+fi
+
 alias ls="ls --color=auto"
 
 alias vi="nvim"
@@ -34,4 +38,6 @@ eval "$(starship init zsh)"
 
 export PATH=$HOME/.progate/bin:$PATH
 export PATH=$HOME/.nodenv/bin:$PATH
-eval "$(nodenv init -)"
+if  [[ $(command -v nodenv) ]]; then
+    eval "$(nodenv init -)"
+fi
