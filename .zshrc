@@ -41,3 +41,4 @@ export PATH=$HOME/.nodenv/bin:$PATH
 if  [[ $(command -v nodenv) ]]; then
     eval "$(nodenv init -)"
 fi
+
