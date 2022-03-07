@@ -35,8 +35,8 @@ symbol = "🌱  "
 [time]
 disabled = false
 #format = "[$time]($style)"
-format = "[[](bg:#b4bbc8 fg:#A6A6A6) $time[](bg:#A6A6A6 fg:#b4bbc8)]($style)"
-time_format = '%c'
+format = "[[](bg:#b4bbc8 fg:#A6A6A6) $time [](bg:#A6A6A6 fg:#b4bbc8)]($style)"
+time_format = '%R'
 style = "bg:#b4bbc8 fg:#111111"
 
 [username]
