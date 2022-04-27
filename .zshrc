@@ -24,6 +24,10 @@ if [[ $(command -v bat) ]]; then
     alias cat='bat'
 fi
 
+if [[ $(command -v xsel) ]]; then
+    alias pbcopy='xsel --clipboard --input'
+fi
+
 alias ls="ls --color=auto"
 
 alias vi="nvim"
@@ -34,7 +38,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-eval "$(starship init zsh)"
+if [[ $(command -v starship) ]]; then
+    eval "$(starship init zsh)"
+fi	
 
 export PATH=$HOME/.progate/bin:$PATH
 export PATH=$HOME/.nodenv/bin:$PATH
@@ -42,3 +48,4 @@ if  [[ $(command -v nodenv) ]]; then
     eval "$(nodenv init -)"
 fi
 
+export PATH="$HOME/.cargo/bin:$PATH"
