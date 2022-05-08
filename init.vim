@@ -1,5 +1,5 @@
 set clipboard=unnamedplus
-set relativenumber
+set number
 set smartindent
 set showcmd
 set nobackup noswapfile
