@@ -42,3 +42,5 @@ if  [[ $(command -v nodenv) ]]; then
     eval "$(nodenv init -)"
 fi
 
+export PATH=$HOME/.local/bin:$PATH
+export GOOGLE_APPLICATION_CREDENTIALS="/home/marlowe/Workspace/100program/receipt-nutrient-management/test_ocr/groovy-reducer-342714-72e157dbb95c.json"
