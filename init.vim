@@ -28,7 +28,7 @@ augroup END
 
 set statusline=%F%m%h%w\ %<[ENC=%{&fenc!=''?&fenc:&enc}]\ [FMT=%{&ff}]\ [TYPE=%Y]\ %=[CODE=0x%02B]\ [POS=%l/%L(%02v)]
 
-"key-binding
+" key-binding
 imap <C-k> <Up>
 imap <C-j> <Down>
 imap <C-h> <Left>

@@ -50,5 +50,10 @@ if  [[ $(command -v nodenv) ]]; then
 fi
 
 export PATH=$HOME/.local/bin:$PATH
-export GOOGLE_APPLICATION_CREDENTIALS="/home/marlowe/Workspace/100program/receipt-nutrient-management/test_ocr/groovy-reducer-342714-72e157dbb95c.json"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=/usr/local/original_commands:$PATH
+export PATH="$HOME/linuxbrew/bin:$PATH"
+export MANPATH="$HOME/linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/linuxbrew/share/info:$INFOPATH"
+export LD_LIBRARY_PATH="$HOME/linuxbrew/lib:$LD_LIBRARY_PATH"
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
