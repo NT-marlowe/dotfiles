@@ -14,8 +14,8 @@ set wildmenu
 set nobackup noswapfile
 syntax enable
 
-" color-schime
-colorscheme ron
+" color-scheme
+colorscheme hybrid
 autocmd ColorScheme * highlight LineNr ctermfg=247
 augroup TransparentBG
     autocmd!
