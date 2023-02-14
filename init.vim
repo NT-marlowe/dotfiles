@@ -15,7 +15,7 @@ set nobackup noswapfile
 syntax enable
 
 " color-schime
-colorscheme darkblue
+colorscheme ron
 autocmd ColorScheme * highlight LineNr ctermfg=247
 augroup TransparentBG
     autocmd!

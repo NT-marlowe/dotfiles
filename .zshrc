@@ -2,38 +2,14 @@
 
 # $(COMMAND) is an expansion of a command COMMAND
 # "command -v foobar" returns the filepath where "foobar" is located (if exists)
-if [[ $(command -v exa) ]]; then
-    alias e='exa '
-    alias l=e
-    alias ls=e
-    alias ea='exa -a' 
-    alias la=ea
-    alias ee='exa -aal '
-    alias ll='exa -l'
-    alias lla=ee
-    alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" '
-    alias lt=et
-    alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always  | less -r'
-    alias lta=eta
-fi
 
-if [[ $(command -v batcat) ]]; then
-    alias cat='batcat'
-fi
-
-if [[ $(command -v bat) ]]; then
-    alias cat='bat'
-fi
-
-if [[ $(command -v xsel) ]]; then
-    alias pbcopy='xsel --clipboard --input'
-fi
 
 alias ls="ls --color=auto"
 
 alias vi="nvim"
 
-
+# load alias commands
+source /home/denjo/dotfiles/alias.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -57,3 +33,4 @@ export MANPATH="$HOME/linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/linuxbrew/share/info:$INFOPATH"
 export LD_LIBRARY_PATH="$HOME/linuxbrew/lib:$LD_LIBRARY_PATH"
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
+export PATH=$PATH:/usr/local/go/bin
