@@ -3,8 +3,9 @@ local act = wezterm.action
 
 return {
     font_size = 14.0,
-    window_background_opacity = 0.6,
-    color_scheme = "iceberg-dark",
+    window_background_opacity = 0.7,
+    -- https://wezfurlong.org/wezterm/colorschemes/t/index.html
+    color_scheme = "Japanesque",
 
     keys = {{
         key = "t",
