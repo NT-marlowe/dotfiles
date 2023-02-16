@@ -8,14 +8,26 @@ return {
     color_scheme = "Hybrid (terminal.sexy)",
 
     keys = {{
-        key = "t",
-        mods = "CTRL",
+        key = 't',
+        mods = 'CTRL',
         action = act.SpawnTab 'CurrentPaneDomain'
     }, {
-        key = "w",
-        mods = "CTRL",
+        key = 'w',
+        mods = 'CTRL',
         action = act.CloseCurrentPane {
             confirm = false
+        }
+    }, {
+        key = '"',
+        mods = 'CTRL|SHIFT',
+        action = act.SplitVertical {
+            domain = 'CurrentPaneDomain'
+        }
+    }, {
+        key = '%',
+        mods = 'CTRL|SHIFT',
+        action = act.SplitHorizontal {
+            domain = 'CurrentPaneDomain'
         }
     }}
 }
