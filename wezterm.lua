@@ -13,7 +13,7 @@ return {
         action = act.SpawnTab 'CurrentPaneDomain'
     }, {
         key = 'w',
-        mods = 'CTRL',
+        mods = 'CTRL|SHIFT',
         action = act.CloseCurrentPane {
             confirm = false
         }
