@@ -15,3 +15,5 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlesearch<CR>')
+vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { silent = true })
+
