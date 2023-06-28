@@ -6,6 +6,7 @@ return {
     window_background_opacity = 0.7,
     -- https://wezfurlong.org/wezterm/colorschemes/t/index.html
     color_scheme = "Hybrid (terminal.sexy)",
+    font = wezterm.font("Source Han Code JP"),
 
     keys = {{
         key = 't',

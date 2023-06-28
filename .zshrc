@@ -9,7 +9,7 @@ alias ls="ls --color=auto"
 alias vi="nvim"
 
 # load alias commands
-source /home/denjo/dotfiles/alias.zsh
+source ~/dotfiles/alias.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -25,6 +25,13 @@ if  [[ $(command -v nodenv) ]]; then
     eval "$(nodenv init -)"
 fi
 
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
 export PATH=$HOME/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/usr/local/original_commands:$PATH
@@ -34,6 +41,12 @@ export INFOPATH="$HOME/linuxbrew/share/info:$INFOPATH"
 export LD_LIBRARY_PATH="$HOME/linuxbrew/lib:$LD_LIBRARY_PATH"
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 export PATH=$PATH:/usr/local/go/bin
+<<<<<<< Updated upstream
 export PATH=$PATH:~/go/bin
 
 
+=======
+
+autoload -U compinit
+compinit -i
+>>>>>>> Stashed changes

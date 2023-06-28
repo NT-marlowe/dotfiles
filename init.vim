@@ -1,4 +1,4 @@
-set clipboard=unnamedplus
+set clipboard=unnamed,unnamedplus
 set number
 set smartindent
 set showcmd

@@ -1,5 +1,5 @@
 autocmd ColorScheme * highlight LineNr ctermfg=239
-set number 
+set number
 set nowritebackup
 " ファイルを上書きする前にバックアップを作ることを無効化
 set nobackup
@@ -53,8 +53,12 @@ set listchars=tab:^\ ,trail:~
 set history=10000
 " コメントの色を水色
 hi Comment ctermfg=3
-" 入力モードでTabキー押下時に半角スペースを挿入
 set expandtab
+let _curfile=expand("%:r")
+if _curfile == "Makefile"
+  set noexpandtab
+endif
+
 " インデント幅
 set shiftwidth=2
 " タブキー押下時に挿入される文字幅を指定
@@ -85,6 +89,7 @@ set number
 set clipboard=unnamed,autoselect
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+inoremap <silent> jj <ESC>
 " シンタックスハイライト
 syntax on
 " すべての数を10進数として扱う
