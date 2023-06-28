@@ -41,12 +41,7 @@ export INFOPATH="$HOME/linuxbrew/share/info:$INFOPATH"
 export LD_LIBRARY_PATH="$HOME/linuxbrew/lib:$LD_LIBRARY_PATH"
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 export PATH=$PATH:/usr/local/go/bin
-<<<<<<< Updated upstream
 export PATH=$PATH:~/go/bin
-
-
-=======
 
 autoload -U compinit
 compinit -i
->>>>>>> Stashed changes
