@@ -6,7 +6,10 @@
 
 alias ls="ls --color=auto"
 
-alias vi="nvim"
+alias nn="nvim"
+alias s='nn ~/.zshrc'
+alias sa='nn ~/dotfiles/alias.zsh'
+alias ss='source ~/.zshrc'
 
 # load alias commands
 source ~/dotfiles/alias.zsh
@@ -42,6 +45,10 @@ export LD_LIBRARY_PATH="$HOME/linuxbrew/lib:$LD_LIBRARY_PATH"
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
 
+# completion settings
 autoload -U compinit
 compinit -i
+
+

@@ -1,3 +1,7 @@
+EDITOR='nvim'
+alias s="$EDITOR ~/.zshrc"
+alias ss='source ~/.zshrc'
+
 if [[ $(command -v xsel) ]]; then
     alias pbcopy='xsel --clipboard --input'
 fi
@@ -28,3 +32,5 @@ fi
 if [[ $(command -v xsel) ]]; then
     alias pbcopy='xsel --clipboard --input'
 fi
+
+alias brr='sudo systemctl restart bluetooth.service'

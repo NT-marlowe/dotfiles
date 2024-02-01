@@ -19,13 +19,13 @@ return {
             confirm = false
         }
     }, {
-        key = '"',
+        key = '1',
         mods = 'CTRL|SHIFT',
         action = act.SplitVertical {
             domain = 'CurrentPaneDomain'
         }
     }, {
-        key = '%',
+        key = '2',
         mods = 'CTRL|SHIFT',
         action = act.SplitHorizontal {
             domain = 'CurrentPaneDomain'

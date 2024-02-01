@@ -16,4 +16,6 @@ vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlesearch<CR>')
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { silent = true })
+vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { silent = true })
+vim.api.nvim_set_keymap('i', 'kj', '<ESC>', { silent = true })
 
