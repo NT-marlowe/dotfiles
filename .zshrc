@@ -52,3 +52,6 @@ autoload -U compinit
 compinit -i
 
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/marlowe/go/bin/gocomplete go
