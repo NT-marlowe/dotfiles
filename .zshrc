@@ -55,3 +55,10 @@ compinit -i
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/marlowe/go/bin/gocomplete go
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi

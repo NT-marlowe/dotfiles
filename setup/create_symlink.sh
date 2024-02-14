@@ -12,4 +12,5 @@ mkdir -p ~/.config/wezterm
 ln -s ~/dotfiles/wezterm.lua ~/.config/wezterm/wezterm.lua
 
 mkdir -p ~/.config/nvim
-ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s ~/dotfiles/init.lua ~/.config/nvim/init.lua
+ln -s ~/dotfiles/lua/ ~/.config/nvim/init.vim

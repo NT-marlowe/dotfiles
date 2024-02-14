@@ -6,7 +6,7 @@ format = """[](bg:#A6A6A6 fg:#57686B)\
         $directory\
         $git_branch\
         $git_status\
-        $python\n\
+        $python\
         $character\
     """
 
