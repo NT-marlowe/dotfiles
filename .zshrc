@@ -52,7 +52,6 @@ autoload -U compinit
 compinit -i
 
 
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/marlowe/go/bin/gocomplete go
 if type brew &>/dev/null
@@ -62,3 +61,4 @@ then
   autoload -Uz compinit
   compinit
 fi
+
