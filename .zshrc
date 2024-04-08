@@ -28,12 +28,6 @@ if  [[ $(command -v nodenv) ]]; then
     eval "$(nodenv init -)"
 fi
 
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
-
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -48,9 +42,15 @@ export PATH=$PATH:~/go/bin
 export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
 
 # completion settings
-autoload -U compinit
-compinit -i
+#autoload -U compinit
+#compinit -i
 
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit -i
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/marlowe/go/bin/gocomplete go
