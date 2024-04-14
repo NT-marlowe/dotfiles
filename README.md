@@ -1,4 +1,11 @@
+# NT-marlowe's dotfiles
+
+## Instalation
+- WIP
+
 ## dependencies
-```
-None
-```
+- zsh
+- fzf (fuzzy-finder)
+- ghq
+- starship
+- neovim
