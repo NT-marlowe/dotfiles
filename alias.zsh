@@ -1,10 +1,12 @@
-EDITOR='nvim'
+EDITOR='nvim' 
 alias s="$EDITOR ~/.zshrc"
 alias ss='source ~/.zshrc'
+alias sc='$EDITOR ~/.ssh/config'
 
 if [[ $(command -v xsel) ]]; then
     alias pbcopy='xsel --clipboard --input'
 fi
+
 
 if [[ $(command -v exa) ]]; then
     alias e='exa '
@@ -45,3 +47,36 @@ function ghq-fzf() {
 }
 zle -N ghq-fzf
 bindkey '^]' ghq-fzf
+
+
+alias dropcheck='sudo ~/Documents/showNet/scripts/dropcheck.sh'
+function change_vlan() {
+    local vlan=$1
+    local interface=$2
+    old_vlan=$(ifconfig | grep vlan: | cut -c 8- | sed 's/parent.*//')
+    if [ -n "$old_vlan" ]; then
+        networksetup -deleteVLAN vlan0 $interface $old_vlan
+    fi
+    read -p "vlan ID:" vlan
+    if [ $vlan = 0 ]; then
+        exit $status
+    fi
+    networksetup -createVLAN vlan0 $interface $vlan
+}
+
+function delete_subIF() {
+    local vlan=$1
+    local interface=$2
+
+    networksetup -deleteVLAN vlan0 $interface $vlan
+}
+
+function make_subIF() {
+    local vlan=$1
+    local interface=$2
+
+    networksetup -createVLAN vlan0 $interface $vlan
+}
+
+alias cs='cd ~/Documents/showNet/scripts/'
+
