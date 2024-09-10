@@ -13,6 +13,8 @@ alias ss='source ~/.zshrc'
 
 # load alias commands
 source ~/dotfiles/alias.zsh
+#source ~/dotfiles/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -41,10 +43,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:/usr/local/bin/nvim-linux64/bin
 
-# completion settings
-#autoload -U compinit
-#compinit -i
-
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit -i
@@ -65,4 +63,5 @@ fi
 eval "$(/usr/libexec/path_helper)"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+
 
