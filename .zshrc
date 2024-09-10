@@ -12,8 +12,7 @@ alias sa='nn ~/dotfiles/alias.zsh'
 alias ss='source ~/.zshrc'
 
 # load alias commands
-source ~/dotfiles/alias.zsh
-#source ~/dotfiles/.fzf.zsh
+source ~/dotfiles/aliases.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
