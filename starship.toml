@@ -33,7 +33,6 @@ style = "bold bright-cyan"
 style = "bold bright-purple"
 symbol = "🌱  "
 
-
 [time]
 disabled = false
 #format = "[$time]($style)"
