@@ -3,9 +3,10 @@
 # $(COMMAND) is an expansion of a command COMMAND
 # "command -v foobar" returns the filepath where "foobar" is located (if exists)
 
+export GPG_TTY=$(tty)
+alias "$"=""
 
 alias ls="ls --color=auto"
-
 alias nn="nvim"
 alias s='nn ~/.zshrc'
 alias sa='nn ~/dotfiles/alias.zsh'
