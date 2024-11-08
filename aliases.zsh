@@ -1,4 +1,4 @@
-EDITOR='nvim' 
+export EDITOR='nvim'
 alias s="$EDITOR ~/.zshrc"
 alias ss='source ~/.zshrc'
 alias sc='$EDITOR ~/.ssh/config'
