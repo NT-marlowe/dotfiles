@@ -16,3 +16,5 @@ ln -s ~/dotfiles/init.lua ~/.config/nvim/init.lua
 ln -s ~/dotfiles/lua/ ~/.config/nvim/lua
 
 ln -s ~/dotfiles/.fzf.zsh ~/.fzf.zsh
+
+ln -s ~/dotfiles/yazi ~/.config/yazi
