@@ -1,0 +1,37 @@
+## all ignore 
+/*
+/.**
+
+## config
+!/.config/
+!/.config/**
+
+/.config/iterm2/
+/.config/wireshark/
+
+## vim
+/init.vim
+/.vimrc
+
+## neovim
+/.config/nvim/plugin/**
+
+## zsh
+!/.zshrc
+!/aliases.zsh
+!/.fzf.zsh
+
+## latex
+!/.latexmkrc
+
+## global
+__pycache__
+!/README.md
+!/LICENSE
+!/Makefile
+!/install.sh
+!/install_scripts/
+!/install_scripts/**
+!.linkignore
+!.gitignore
+!.gitkeep
