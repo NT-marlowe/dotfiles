@@ -64,4 +64,5 @@ eval "$(/usr/libexec/path_helper)"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+eval "$(sheldon source)"
 
