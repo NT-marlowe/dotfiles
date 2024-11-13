@@ -1,0 +1,11 @@
+[alias]
+    d = diff
+    a = add
+    ss = status
+    br = branch
+    c = commit
+    ca = commit -a
+    caa = commit -a --amend
+    lo = log --oneline
+    p = push origin HEAD
+    pl = pull

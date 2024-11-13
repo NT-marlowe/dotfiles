@@ -1,7 +1,7 @@
 export EDITOR='nvim'
 alias s="$EDITOR ~/.zshrc"
 alias ss='source ~/.zshrc'
-alias sc='$EDITOR ~/.ssh/config'
+alias sc="$EDITOR ~/.ssh/config"
 alias sa='$EDITOR ~/dotfiles/aliases.zsh'
 
 
