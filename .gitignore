@@ -24,6 +24,11 @@
 ## latex
 !/.latexmkrc
 
+## hammerspoon
+!/.hammerspoon/
+!/.hammerspoon/**
+/.hammerspoon/Spoons/
+
 ## global
 __pycache__
 !/README.md
