@@ -1,6 +1,6 @@
 # NT-marlowe's dotfiles
 
-## Instalation
+## Installation
 - WIP
 
 ## dependencies
