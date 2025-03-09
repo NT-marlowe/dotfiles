@@ -1,4 +1,2 @@
-hs.loadSpoon("ReloadConfiguration")
-spoon.ReloadConfiguration:start()
-
+require('lua.load_spoons')
 require('lua.keymaps')
