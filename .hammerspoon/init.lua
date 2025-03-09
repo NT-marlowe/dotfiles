@@ -1,8 +1,5 @@
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
-  hs.reload()
-end)
-hs.alert.show("Hammerspoon config loaded")
-
+hs.loadSpoon("ReloadConfiguration")
+spoon.ReloadConfiguration:start()
 
 local function keyCode(key, modifiers)
     modifiers = modifiers or {}
