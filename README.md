@@ -9,3 +9,4 @@
 - ghq
 - starship
 - neovim
+- hammerspoon
