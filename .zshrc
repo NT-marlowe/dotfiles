@@ -66,3 +66,8 @@ export LC_ALL="en_US.UTF-8"
 
 eval "$(sheldon source)"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/naoya/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
