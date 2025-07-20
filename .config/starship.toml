@@ -47,8 +47,6 @@ format = "[$user]($style) in "
 #format = "[[](bg:#728da8 fg:#A6A6A6)$user[](bg:#A6A6A6 fg:#728da8)]($style) "
 show_always = true
 
-
-
 # language-specific settings
 [python]
 
