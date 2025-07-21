@@ -33,6 +33,9 @@ style = "bold bright-cyan"
 style = "bold bright-purple"
 symbol = "🌱  "
 
+[hostname]
+format = '$ssh_symbol[$hostname](bold red) in '
+
 [time]
 disabled = false
 #format = "[$time]($style)"
