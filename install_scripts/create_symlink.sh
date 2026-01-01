@@ -7,5 +7,8 @@ ln -s ~/dotfiles/.zshrc ./.zlogin
 
 ln -s ~/dotfiles/.config ~/
 
-ln -s ~/dotfiles/.fzf.zsh ~/.fzf.zsh
+# ensure zellij config is available at ~/.config/zellij
+mkdir -p ~/.config
+ln -s ~/dotfiles/.config/zellij ~/.config/zellij
 
+ln -s ~/dotfiles/.fzf.zsh ~/.fzf.zsh

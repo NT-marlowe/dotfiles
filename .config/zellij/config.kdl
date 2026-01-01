@@ -319,8 +319,9 @@ web_client {
 // Options:
 //   - true (default)
 //   - false
-// 
-// mouse_mode false
+//
+// Enable mouse scrolling to use Zellij scrollback in normal mode.
+mouse_mode true
  
 // Toggle having pane frames around the panes
 // Options:
