@@ -14,7 +14,42 @@ end
 remapKey({'ctrl'}, 'h', keyCode('left'))
 remapKey({'ctrl'}, 'j', keyCode('down'))
 remapKey({'ctrl'}, 'k', keyCode('up'))
-remapKey({'ctrl'}, 'l', keyCode('right'))
+-- Ctrl+L is special: some terminals use it for "clear screen", so we only remap
+-- it outside those apps to avoid breaking the native shortcut.
+local ctrlLHotkey = hs.hotkey.new({'ctrl'}, 'l', keyCode('right'), nil, keyCode('right'))
+ctrlLHotkey:enable()
+
+-- We use an application watcher so we don't check the frontmost app on every
+-- key press; instead we toggle Ctrl+L once when focus changes.
+local ctrlLDisabledBundleIDs = {
+   ["com.googlecode.iterm2"] = true,
+   ["com.github.wez.wezterm"] = true,
+}
+
+local function isCtrlLDisabledForApp(app)
+   local bundleID = app and app:bundleID() or ""
+   return ctrlLDisabledBundleIDs[bundleID] == true
+end
+
+local function updateCtrlLForApp(appName, eventType, app)
+   if eventType ~= hs.application.watcher.activated then
+      return
+   end
+
+   if isCtrlLDisabledForApp(app) then
+      ctrlLHotkey:disable()
+   else
+      ctrlLHotkey:enable()
+   end
+end
+
+local appWatcher = hs.application.watcher.new(updateCtrlLForApp)
+appWatcher:start()
+
+local frontmostApp = hs.application.frontmostApplication()
+if isCtrlLDisabledForApp(frontmostApp) then
+   ctrlLHotkey:disable()
+end
 
 remapKey({'ctrl', 'cmd'}, 'h', keyCode('left', {'cmd'}))
 remapKey({'ctrl', 'cmd'}, 'j', keyCode('down', {'cmd'}))
