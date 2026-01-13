@@ -3,10 +3,38 @@ local act = wezterm.action
 
 return {
     font_size = 14.0,
-    window_background_opacity = 0.7,
+    font = wezterm.font ({
+          family = "JetBrains Mono",
+          harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
+    }),
+    font_rules = {
+        {
+            intensity = "Bold",
+            font = wezterm.font("JetBrains Mono", {
+                weight = "Bold",
+                harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
+            })
+        },
+        {
+            italic = true,
+            font = wezterm.font("JetBrains Mono", {
+                style = "Italic",
+                harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
+            })
+        },
+        {
+            intensity = "Bold",
+            italic = true,
+            font = wezterm.font("JetBrains Mono", {
+                weight = "Bold",
+                style = "Italic",
+                harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
+            })
+        }
+    },
+    window_background_opacity = 0.85,
     -- https://wezfurlong.org/wezterm/colorschemes/t/index.html
     color_scheme = "Hybrid (terminal.sexy)",
-    font = wezterm.font("Source Han Code JP"),
 
     keys = {{
         key = 't',
