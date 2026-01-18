@@ -11,6 +11,8 @@ local function remapKey(modifiers, key, keyCode)
    hs.hotkey.bind(modifiers, key, keyCode, nil, keyCode)
 end
 
+local log = hs.logger.new("keymaps", "debug")
+
 remapKey({'ctrl'}, 'h', keyCode('left'))
 remapKey({'ctrl'}, 'j', keyCode('down'))
 remapKey({'ctrl'}, 'k', keyCode('up'))
@@ -36,6 +38,12 @@ local function updateCtrlLForApp(appName, eventType, app)
       return
    end
 
+   if app then
+      log.df("frontmost app: %s (%s)", app:name(), app:bundleID() or "unknown")
+   else
+      log.d("frontmost app: unknown (nil app)")
+   end
+
    if isCtrlLDisabledForApp(app) then
       ctrlLHotkey:disable()
    else
@@ -47,6 +55,11 @@ local appWatcher = hs.application.watcher.new(updateCtrlLForApp)
 appWatcher:start()
 
 local frontmostApp = hs.application.frontmostApplication()
+if frontmostApp then
+   log.df("frontmost app (initial): %s (%s)", frontmostApp:name(), frontmostApp:bundleID() or "unknown")
+else
+   log.d("frontmost app (initial): unknown (nil app)")
+end
 if isCtrlLDisabledForApp(frontmostApp) then
    ctrlLHotkey:disable()
 end
