@@ -80,3 +80,7 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 #
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Use emacs keybind even if EDITOR=vim
+# https://github.com/zellij-org/zellij/issues/3890
+bindkey -e
