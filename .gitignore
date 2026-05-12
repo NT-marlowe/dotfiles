@@ -37,6 +37,8 @@ __pycache__
 !/install.sh
 !/install_scripts/
 !/install_scripts/**
+!/docs/
+!/docs/**
 !.linkignore
 !.gitignore
 !.gitkeep
