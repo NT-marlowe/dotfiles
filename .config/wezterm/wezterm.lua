@@ -13,4 +13,14 @@ return {
     color_scheme = "Hybrid (terminal.sexy)",
 
     -- keys = require 'keybind'
+    enable_kitty_keyboard = true,
+    keys = {
+        -- workaround for Shift+Enter being treated as Enter in zellij
+        -- https://github.com/zellij-org/zellij/issues/4159
+        {
+            key = "Enter",
+            mods = "SHIFT",
+            action = wezterm.action.SendString("\x1b[200~\n\x1b[201~"),
+        },
+    },
 }
